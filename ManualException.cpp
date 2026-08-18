@@ -12,4 +12,9 @@ int main(){
     catch(int e){
         cout << "Pengecualian akan dieksekusi" << endl;
     }
+    //kondisi jika throw yang bertipe data selain integer
+    catch(...){
+        cout << "Default Pengecualian dieksekusi" << endl;
+    }
+    return 0;
 }
