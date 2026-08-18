@@ -17,5 +17,6 @@ int main () {
     {
         cout << e.what() << endl; //menampilkan error
     }
-    
+    cout << "Baris program terakhir" << endl; //penanda 2
+    return 0;
 }
