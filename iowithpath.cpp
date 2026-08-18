@@ -7,27 +7,22 @@ int main() {
     //deklarasi variabel baris dan namafile
     string baris, NamaFile;
 
-    //membuat input untuk menangkap nama file
-    cout << "Masukkan nama file: ";
-    cin >> NamaFile;
-
     //membuat file dalam mode menulis
     ofstream outfile;
 
     //menunjuk ke sebuah nama file dengan ekstensi txt
-    outfile.open("C:\\Users\\LENOVO\\Documents\\contoh\\" + NamaFile +
-    ".txt", ios :: out);
+    outfile.open("ContohFile.txt");
 
     cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 
-    //looping untuk menulis isi file
+    //unlimited loop untuk menulis isi file
     while (true) {
         cout << "- ";
         //mendapatkan setiap karakter dalam satu baris
         getline(cin, baris);
         //kondisi jika baris hanya berisi huruf q
         if (baris == "q") break;
-        //menulis dan memasukkan nilai dari baris ke dalam file
+        //menulis dan memasukkan nilai dari variabelbaris ke dalam file
         outfile << baris << endl;
     }
     //menutup file apabila telah selesai ditulis
@@ -52,7 +47,6 @@ int main() {
     }
 
     //kondisi jika file tidak ada
-    else {
-        cout << "File tidak ditemukan" << endl;
-    }
+    else cout << "Unable to open file" << endl;
+    return 0;
 }
