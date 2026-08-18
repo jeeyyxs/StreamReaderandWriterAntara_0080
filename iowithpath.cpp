@@ -6,4 +6,8 @@ using namespace std;
 int main() {
     //deklarasi variabel baris dan namafile
     string baris, Namafile;
+
+    //membuat input untuk menangkap nama file
+    cout << "Masukkan nama file: ";
+    cin >> Namafile;
 }
